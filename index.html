@@ -88,7 +88,7 @@
     <div id="popup" class="popup-overlay">
         <div class="popup-container">
             <button class="popup-close" id="popupClose">×</button>
-            <a href="sms:01094691051" class="popup-link">
+            <a href="sms:01094691051" id="smsConversion" class="popup-link">
                 <img src="popup.png" alt="상담 안내 팝업" class="popup-image">
             </a>
             <div class="popup-buttons">
@@ -132,10 +132,10 @@
                     </div>
                 </div>
                 <div class="hero-cta">
-                    <a href="tel:01094691051" class="btn btn-primary btn-large">
+                    <a href="tel:01094691051" id="callConversion" class="btn btn-primary btn-large">
                         📞 지금 바로 전화 상담
                     </a>
-                    <a href="sms:01094691051" class="btn btn-secondary btn-large">
+                    <a href="sms:01094691051" id="smsConversion" class="btn btn-secondary btn-large">
                         💬 문자 상담 요청
                     </a>
                 <a href="tel:010-9469-1051" class="btn btn-accent btn-large" style="display: inline-flex; align-items: center; font-weight: bold; font-size: 1.35em; padding: 1em 2em; margin-top: 12px; background: #fffef7; border: 2px solid #f0c050; color: #4a3500; border-radius: 10px; gap: 0.5em; box-shadow: 0 2px 8px rgba(208,162,37,0.13); text-decoration: none;">
@@ -245,13 +245,13 @@
             <h2 class="section-title">상담 방법 안내</h2>
             <p class="section-subtitle">원하시는 방법으로 편하게 상담받으세요</p>
             <div class="contact-cards">
-                <a href="tel:01094691051" class="contact-card contact-card-phone">
+                <a href="tel:01094691051" id="callConversion" class="contact-card contact-card-phone">
                     <div class="contact-icon">📞</div>
                     <h3 class="contact-title">전화 상담</h3>
                     <p class="contact-desc">010-9469-1051</p>
                     <p class="contact-subdesc">24시간 상담 가능</p>
                 </a>
-                <a href="sms:01094691051" class="contact-card contact-card-sms">
+                <a href="sms:01094691051" id="smsConversion" class="contact-card contact-card-sms">
                     <div class="contact-icon">💬</div>
                     <h3 class="contact-title">문자 상담</h3>
                     <p class="contact-desc">010-9469-1051</p>
@@ -471,8 +471,13 @@
     for (let i = 0; i < 5; i++) addRandomRow();
     setInterval(addRandomRow, 1000);
   </script>
+
+
+
+    <script> document.getElementById('callConversion')?.addEventListener('click', function () { gtag('event', 'conversion', { 'send_to': 'AW-16621991606/_Ha4CKPVjugbELbt_fU9' }); }); document.getElementById('smsConversion')?.addEventListener('click', function () { gtag('event', 'conversion', { 'send_to': 'AW-16621991606/_Ha4CKPVjugbELbt_fU9' }); }); </script>
 </body>
 </html>
+
 
 
 
